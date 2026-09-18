@@ -1,0 +1,828 @@
+
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>
+	Ofertas Empleo
+</title><link href="https://www.navarra.es/o/portal-navarra-theme-3/images/favicon.ico" rel="icon" /><link rel="stylesheet" href="Content/bootstrap.min.css" /><link rel="stylesheet" href="Content/bootstrap.min.css.map" /><link rel="stylesheet" href="Content/Site.css" /><link rel="stylesheet" type="text/css" href="estilos/main.css" media="screen" /><link rel="stylesheet" type="text/css" href="estilos/estilos.css" media="screen" /><link rel="stylesheet" type="text/css" href="sweet/sweetalert.css" media="screen" /><link rel="stylesheet" href="estilos/fonts/css/font-awesome.min.css" /><link rel="stylesheet" href="Content/select2.min.css" /><link rel="preconnect" href="https://fonts.gstatic.com" /><link href="https://fonts.googleapis.com/css2?family=Merriweather&amp;display=swap" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&amp;display=swap" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;display=swap" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;400;700&amp;display=swap" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100;400&amp;display=swap" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+    <script src="/EmpleoIntermediacion/sweet/sweetalert.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /><script type="text/javascript">var _paq = _paq || [];_paq.push(['trackPageView']);_paq.push(['enableLinkTracking']);(function() {var u="//estadisticasweb.navarra.es/";_paq.push(['setTrackerUrl', u+'piwik.php']);_paq.push(['setSiteId', '102']);var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);})();</script></head>
+<body>
+    <form method="post" action="./listadodeofertas" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl01'];
+if (!theForm) {
+    theForm = document.ctl01;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+
+<script src="/EmpleoIntermediacion/bundles/MsAjaxJs?v=D6VN0fHlwFSIWjbVzi6mZyE9Ls-4LNrSSYVGRU46XF81" type="text/javascript"></script>
+<script src="Scripts/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="/EmpleoIntermediacion/bundles/WebFormsJs?v=N8tymL9KraMLGAMFuPycfH3pXe6uUlRXdhtYv8A_jUU1" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E16FC84E" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="2eAv8hFu8Umdw8qNwxMFi3eZMsAELzi11tbkG5ThkC3zDnE8bwYADYLqy6z6K8kIPnd4KH/PiPi2oa+QRVtMBuXyksU5VHPdVZ40NqxV6jZMb2FKf2sQFnLJ79sRubGGDW4AomoZ3LY+ZaV817NcQSzMQHoJxVklPoZa8LGSqLq3U+zPLSSbOplp72DSwDtOap4qFX4e8jaNsvriL2FU3qG7fneIu7Rz6cAlWd48k997+iU0NjxjRsRVYNlk4FSQfvPHAy6DsYsnueo32CsDOwg8+YdylFXm0dQ/m3S3kTKUhwYRPqnDrNnXV1mZVbETlR+Hfz3KV0mep01hY7YfUbwgPRlYlNEyzeTt9VWcYr1znTvJlh2UETxDdFd/+l8ncGDEfI2UHTGNoEZQQKkDhZYHFDheNstV+aMymHA6dp82tjAouWvdf8mEricCd8wo5mEzVEPCLl2lPU9va7DqcI02pwMU1a4rJm2NgoIHwzKsRYHgOqXecuxU6qa7iCoJaxy79g3l+OHxlrI7eLKm8NIYINU7Q4MIHJ8/xOYic+uVq5PjKI2kR583tcG2WoEPFIFfTKr51PROpJqXnb7LfGaZwu9r1VAR5pe4RfnZMMIXscweVfdQwNgOXh8QN/Ya07cXfXUlsRtAXZUiyzNGqD0bzJan1RanJqs6+jsXMFAafUGdntfnaPRP4fx5FSAkQBRw6iAz/CbY6X3bMCJ3706gBnOML/dTvBY3Z+CKsy7g50+R2O95P2gwaTQJk9p3kDQ30QupWFUfdWqndzCoFLnJqsXpfgY9DZ5+L5k2obNNaYbjip2DfKJCJEeSV1ixybM3uH8/Vy0zTHqz7TmUoJ/+pvS+OUqdtj701Q/Cr8I7KxBopu3i6Jys4TrUrh4oMA6vDiPk2k51+6KHYTQsZgbskfbWieRWN2vfeOykE7cIRR8HDt4sptpMqobXtXS0Ugh6GolhaJVw5RpxaGsBZCaCwLYgTSgBl/gwZ5XHOaNwgwzP" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl22', 'ctl01', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+       <nav class="navbar navbar-inverse navbar-fixed-top">
+                   
+    <div class="container d-block">
+        <div class="flex-row">
+            <div style="text-align: left !important;">
+               <img alt="" style="height:54px;" src="/EmpleoIntermediacion/images/SNE-NAFARLOG.jpg" />
+            </div>
+            <div class="hidden-xs">
+                <div class="navbar-brand">
+                    <div class="journal-content-article " data-analytics-asset-id="4084517" data-analytics-asset-title="Portal - Logo principal 3.0" data-analytics-asset-type="web-content"></div>
+	            </div>
+            </div>
+            <div>
+                <ul class="tools" style="margin:0;">
+                    <li class="hidden-xs">
+                        <div class="portlet-boundary portlet-boundary_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_  portlet-static portlet-static-end portlet-without-title portlet-language " id="p_p_id_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_INSTANCE_languagescontentv3_">
+                            <span id="p_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_INSTANCE_languagescontentv3"></span>
+                            <section class="portlet" id="portlet_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_INSTANCE_languagescontentv3">
+	                            <div class="portlet-content">
+		                            <div class="autofit-float autofit-row portlet-header">
+			                            <div class="autofit-col autofit-col-end">
+				                            <div class="autofit-section"></div>
+			                            </div>
+		                            </div>
+			                        <div class=" portlet-content-container">
+	                                    <div class="portlet-body"></div>
+			                        </div>
+	                            </div>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        
+                                <ul class="nav navbar-nav navbar-right" style="margin:auto -15px">
+                                    <input type="submit" name="ctl00$Visor$inicio" value="Inicio de sesión / registro" id="Visor_inicio" style="display: initial;" />
+                                    <input type="submit" name="ctl00$Visor$eldeentrar" value="" id="Visor_eldeentrar" title="Ir a menú" ImageUrl="~/images/Entrar.png" style="visibility:hidden;" />
+                                    <span id="Visor_nombre"></span>  <a id="Visor_hiper" title="Desconectar" href="javascript:__doPostBack(&#39;ctl00$Visor$hiper&#39;,&#39;&#39;)" style="visibility:hidden;margin-left:5px;"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a>
+                                </ul>
+                            	
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+            <div class="collapse" id="navbar-collapse-1" aria-expanded="false">
+	<div class="portlet-boundary portlet-boundary_com_liferay_journal_content_web_portlet_JournalContentPortlet_  portlet-static portlet-static-end portlet-without-title portlet-journal-content " id="p_p_id_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_navbarmenu_">
+		<span id="p_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_navbarmenu"></span>
+<section class="portlet" id="portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_navbarmenu">
+	<div class="portlet-content">
+		<div class="autofit-float autofit-row portlet-header">
+            			<div class="autofit-col autofit-col-end">
+				<div class="autofit-section">
+<div class="visible-interaction">
+</div>				</div>
+			</div>
+		</div>
+
+		
+			<div class=" portlet-content-container">
+	<div class="portlet-body">
+						<div class="" data-fragments-editor-item-id="29009-4084394" data-fragments-editor-item-type="fragments-editor-mapped-item">
+<div class="journal-content-article " data-analytics-asset-id="4084392" data-analytics-asset-title="Portal - Menú de Navegación 3.0" data-analytics-asset-type="web-content">
+
+	    
+
+</div>
+						</div>
+	</div>
+
+			</div>
+		
+	</div>
+</section>
+	</div>
+        </div>
+        <div class="collapse" id="navbar-collapse-2" aria-expanded="false">
+            
+        </div>
+    </div>
+        </nav>
+
+        <div class="container body-content">
+            
+   <script type="text/javascript">
+       document.onkeydown = function (event) {
+           event = event || window.event;
+           if (event.keyCode == 116) {
+               // Realizar la acción deseada cuando se presiona F5
+               window.location.href = "/EmpleoIntermediacion/listadodeofertas";
+           }
+       }
+   </script>
+   <script>
+
+
+       function cambclase() {
+
+
+           if ($('#MainContent_Ocupacion').hasClass('cerradoocupacion')) {
+               $('#MainContent_Ocupacion').addClass('abiertoocupacion');
+               $('#MainContent_Ocupacion').removeClass('cerradoocupacion');
+               $('#MainContent_Vertodocu').html('Ver menos');
+              
+           } else {
+               $('#MainContent_Ocupacion').addClass('cerradoocupacion');
+               $('#MainContent_Ocupacion').removeClass('abiertoocupacion');
+               $('#MainContent_Vertodocu').html('Ver todo');
+           }
+       }
+            function cambclasefiltr() {
+
+                if ($('#Movfilt').hasClass('cerradofil')) {
+                    $('#Movfilt').addClass('abiertofilt');
+                    $('#Movfilt').removeClass('cerradofil');
+
+                    $('#divfilt').addClass('filtmov');
+                    $('#divfilt').removeClass('filtless');
+
+                    $('#MainContent_Abrirfilt').text('Filtros')
+                } else {
+                    $('#Movfilt').addClass('cerradofil');
+                    $('#Movfilt').removeClass('abiertofilt');
+
+                    $('#divfilt').addClass('filtmov');
+                    $('#divfilt').removeClass('filtless');
+
+                    $('#MainContent_Abrirfilt').text('Ocultar Filtros');
+
+                }
+       }
+
+       function cambclasefiltr2() {
+
+           if ($('#Movbusq').hasClass('cerradofil')) {
+               $('#Movbusq').addClass('abiertofilt');
+               $('#Movbusq').removeClass('cerradofil');
+
+               $('#divord').addClass('filtmov');
+               $('#divord').removeClass('filtless');
+
+               $('#MainContent_Abrirorde').text('Ordenar por')
+           } else {
+               $('#Movbusq').addClass('cerradofil');
+               $('#Movbusq').removeClass('abiertofilt');
+
+               $('#divord').addClass('filtmov');
+               $('#divord').removeClass('filtless');
+
+               $('#MainContent_Abrirorde').text('Ocultar Ordenar');
+
+           }
+       }
+
+       function cambclasefiltr3() {
+
+           if ($('#MainContent_ExpLaboral').hasClass('cerradofil')) {
+               $('#MainContent_ExpLaboral').addClass('abiertofilt');
+               $('#MainContent_ExpLaboral').removeClass('cerradofil');
+
+               $('#divfilt2').addClass('filtmov');
+               $('#divfilt2').removeClass('filtless');
+
+               $('#MainContent_boton1').text('- Experiencia Profesional')
+           } else {
+               $('#MainContent_ExpLaboral').addClass('cerradofil');
+               $('#MainContent_ExpLaboral').removeClass('abiertofilt');
+
+               $('#divfilt2').addClass('filtmov');
+               $('#divfilt2').removeClass('filtless');
+
+               $('#MainContent_boton1').text('- Ocultar Experiencia Profesional');
+
+           }
+       }
+
+       function cambclasefiltr4() {
+
+           if ($('#MainContent_Ocupacion').hasClass('cerradofil')) {
+               $('#MainContent_Ocupacion').addClass('abiertofilt');
+               $('#MainContent_Ocupacion').removeClass('cerradofil');
+
+               $('#divfilt3').addClass('filtmov');
+               $('#divfilt3').removeClass('filtless');
+
+              
+
+               $('#MainContent_BuscOcu').addClass('filinvi');
+               $('#MainContent_ImageButton1').addClass('filinvi');
+               $('#MainContent_Vertodocu').addClass('filinvi');
+              
+               $('#MainContent_boton2').text('- Ocupación');
+           } else {
+               $('#MainContent_Ocupacion').addClass('cerradofil');
+               $('#MainContent_Ocupacion').removeClass('abiertofilt');
+
+               $('#divfilt3').addClass('filtmov');
+               $('#divfilt3').removeClass('filtless');
+
+               $('#MainContent_BuscOcu').removeClass('filinvi');
+               $('#MainContent_ImageButton1').removeClass('filinvi');
+               $('#MainContent_Vertodocu').removeClass('filinvi');
+
+
+             
+               $('#MainContent_boton2').text('- Ocultar Ocupación');
+
+           }
+       }
+
+       function cambclasefiltr5() {
+
+           if ($('#MainContent_Tipojornada').hasClass('cerradofil')) {
+               $('#MainContent_Tipojornada').addClass('abiertofilt');
+               $('#MainContent_Tipojornada').removeClass('cerradofil');
+
+               $('#divfilt4').addClass('filtmov');
+               $('#divfilt4').removeClass('filtless');
+
+               $('#MainContent_boton3').text('- Tipo Jornada')
+           } else {
+               $('#MainContent_Tipojornada').addClass('cerradofil');
+               $('#MainContent_Tipojornada').removeClass('abiertofilt');
+
+               $('#divfilt4').addClass('filtmov');
+               $('#divfilt4').removeClass('filtless');
+
+               $('#MainContent_boton3').text('- Ocultar Tipo Jornada');
+
+           }
+       }
+
+       function cambclasefiltr6() {
+           if ($('#MainContent_Zonageo').hasClass('cerradofil')) {
+               $('#MainContent_Zonageo').addClass('abiertofilt');
+               $('#MainContent_Zonageo').removeClass('cerradofil');
+
+               $('#divfilt5').addClass('filtmov');
+               $('#divfilt5').removeClass('filtless');
+
+               $('#MainContent_Boton4').text('- Zona Geográfica')
+           } else {
+               $('#MainContent_Zonageo').addClass('cerradofil');
+               $('#MainContent_Zonageo').removeClass('abiertofilt');
+
+               $('#divfilt5').addClass('filtmov');
+               $('#divfilt5').removeClass('filtless');
+
+               $('#MainContent_Boton4').text('- Ocultar Zona Geográfica');
+           }
+       }
+   </script>
+   
+    <style>
+        span.iconicos {
+    font-size: 20px;
+}
+        .accordionHeader {
+    border-bottom: #ccc solid 1px !important;
+    background: #ffffff url(/EmpleoIntermediacion/images/more.png) no-repeat right;
+    margin-top: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+        .Check label {
+    text-transform: none !important;
+}
+        span.Check {
+    font-size: 16px !important;
+    font-family: 'Roboto-Light';
+    font-weight: 100 !important;
+    line-height: 20px !important;
+    color: #1d1d1b;
+    width: calc(100% - 20px);
+    text-transform: lowercase;
+    cursor: pointer;
+  
+}
+
+        div#MainContent_Ocupacion span {
+            font-size: 16px !important;
+    font-family: 'Roboto-Light';
+   
+    line-height: 20px !important;
+    color: #1d1d1b;
+    /* padding-left: 20px; */
+    width: calc(100% - 20px);
+    
+    cursor: pointer;
+    width: 90%;
+}
+        div#MainContent_Zonageo label {
+    font-size: 16px !important;
+    font-family: 'Roboto-Light';
+    line-height: 20px !important;
+    color: #1d1d1b;
+    cursor: pointer;
+}
+        body a, body a:visited {
+    color: #333;
+    text-decoration: none !important;
+}
+        input#MainContent_antigu {
+ margin-right: 5px;
+    margin-left: 10px;
+        }
+        input#MainContent_reciente {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+        .accordionHeader:nth-child(2) {
+    display: none;
+    visibility: hidden;
+}
+        accordionHeaderSelected {
+             border-bottom: #ccc solid 1px !important;
+    background: #ffffff url(/EmpleoIntermediacion/images/less.png) no-repeat right;
+    margin-top: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+        }
+        a#MainContent_Abrirfilt {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+    .miniresumen2 h2 {
+        font-size: 22px !important;
+    }
+
+    i.fa {
+        font-size: 11px;
+    }
+
+    .list-inline img {
+        width: 100% !important;
+    }
+
+    h2.TituloEmpleos {
+        font-size: 18px;
+    }
+
+    .fa {
+        font-size: 14px !important;
+    }
+
+    a#MainContent_Abrirfilt {
+        visibility: visible !important;
+    }
+
+    .abiertofilt {
+        height: 0px;
+        overflow: hidden;
+    }
+}
+        .accordionHeader {
+    font-weight: 600;
+}
+        div#MainContent_Zonageo span.Check {
+            display: inline-block;
+        }
+        h3{
+            border-top: #ccc 1px solid!important;
+    font-size: 22px;
+    font-family: Roboto;
+    font-weight:600 !important;
+    line-height: 30px;
+    color: #1d1d1b;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+        }
+        #MainContent_Ocupacion input[type=checkbox], input[type=radio] {
+            float: none !important;
+        }
+        i.fa {
+    font-weight: 100 !important;
+    /* font-size: 19px; */
+    font-size: 18px;
+    margin-left: 5px;
+}
+        #busizq span{
+                font-family: 'Roboto-Light';
+    font-size: 16px !important;
+    font-weight: 600;
+        }
+.container {
+       margin: auto !important;
+    max-width: 1170px !important;
+    padding: 15px !important;
+    width: 100%;
+}
+
+footer.footer {
+    height: 0px !important;
+    background: #fff;
+    width: 100% !important;
+}
+    </style>
+    
+    <div id="MainContent_elpanel">
+	
+    
+</div>
+    
+        <h2 class="TituloEmpleos">Ofertas de empleo</h2><br />
+   <span style="font-size: 24px;    font-family: Roboto-Light !important;    font-weight: 100 !important;">Para inscribirse en una oferta deberá iniciar sesión y registrar sus datos la primera vez que acceda</span>
+    <br />
+ <br /> 
+     
+     <div style="clear:both;"></div>
+    <div id="MainContent_filtros" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;MainContent_proBuscarListL&#39;)">
+	
+        <div style="width:100%;">
+                <div class="buscc1" style="width:80%;float:left;">
+                    <input name="ctl00$MainContent$TextoBusquedaL" type="text" id="MainContent_TextoBusquedaL" placeholder="Buscar ofertas" />
+                </div>
+                <div class="buscc2" style="width:20%;float:left;">
+                    <input type="submit" name="ctl00$MainContent$proBuscarListL" value="Buscar" id="MainContent_proBuscarListL" style="width:107px;" />
+                </div>
+        </div>
+        <br />
+        <br />
+    
+</div>
+     
+    <div id="MainContent_filtrosactivos">
+	
+
+    <input type="submit" name="ctl00$MainContent$botcbPamplona4" value="Pamplona X" id="MainContent_botcbPamplona4" title="Pamplona" class="elestilocheck" />
+</div>
+    <br />
+    <div style="clear:both;"></div>
+    <div id="contenedor" class="clearfix">
+            <div id="busizq">
+                <h2 class="titulitis">Filtros</h2>
+                <div id="divfilt" class="filtmov">
+                <a onclick="cambclasefiltr(); return false;" id="MainContent_Abrirfilt" class="botonmovil filinvi" href="javascript:__doPostBack(&#39;ctl00$MainContent$Abrirfilt&#39;,&#39;&#39;)" style="display:inline-block;color:#CC0000;width:500px;">Filtros</a>
+              </div>
+                    <div id="Movfilt" style="clear:both;" class="abiertofilt">
+
+                    <div id="divfilt2" class="filtmov">
+                        <br />
+                  
+                <a onclick="cambclasefiltr3(); return false;" id="MainContent_boton1" class="botonmovil" href="javascript:__doPostBack(&#39;ctl00$MainContent$boton1&#39;,&#39;&#39;)" style="display:inline-block;color:#CC0000;width:500px;">- Experiencia Profesional</a>
+              </div>
+                    <h3 class="novermovil">Experiencia profesional</h3>
+                   <div id="MainContent_ExpLaboral" class="abiertofilt">
+	  
+                        <span class="Check"><input id="MainContent_chExp1" type="checkbox" name="ctl00$MainContent$chExp1" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$chExp1\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_chExp1">Sin experiencia</label></span>
+                        <span id="MainContent_LchExp1"> (22)</span>
+                        <br />
+                       <span class="Check"><input id="MainContent_chExp0" type="checkbox" name="ctl00$MainContent$chExp0" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$chExp0\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_chExp0">Menos de un año</label></span>
+                        <span id="MainContent_LchExp0"> (16)</span>
+                        <br />
+                        <span class="Check"><input id="MainContent_chExp2" type="checkbox" name="ctl00$MainContent$chExp2" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$chExp2\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_chExp2">1 a 3 años de experiencia</label></span>
+                        <span id="MainContent_LchExp2"> (42)</span>
+                        <br />
+                        <span class="Check"><input id="MainContent_chExp3" type="checkbox" name="ctl00$MainContent$chExp3" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$chExp3\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_chExp3">3 a 5 años de experiencia</label></span>
+                        <span id="MainContent_LchExp3"> (2)</span>
+                        <br />
+                        <span class="Check"><input id="MainContent_chExp4" type="checkbox" name="ctl00$MainContent$chExp4" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$chExp4\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_chExp4">Más de 5 años</label></span>
+                        <span id="MainContent_LchExp4"> (2)</span>
+                        <br />
+                   
+</div>
+                        <br />
+                   
+                        <div id="divfilt4" class="filtmov">
+                <a onclick="cambclasefiltr5(); return false;" id="MainContent_boton3" class="botonmovil" href="javascript:__doPostBack(&#39;ctl00$MainContent$boton3&#39;,&#39;&#39;)" style="display:inline-block;color:#CC0000;width:500px;">- Tipo jornada</a>
+              </div>
+                        <h3 class="novermovil">Tipo jornada</h3>
+                   <div id="MainContent_Tipojornada" class="abiertofilt">
+	  
+                            <span class="Check"><input id="MainContent_ChTipojornada1" type="checkbox" name="ctl00$MainContent$ChTipojornada1" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$ChTipojornada1\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_ChTipojornada1">Completa</label></span>&nbsp;<span id="MainContent_LchExp5"> (57)</span>
+                            <br />
+                            <span class="Check"><input id="MainContent_ChTipojornada2" type="checkbox" name="ctl00$MainContent$ChTipojornada2" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$ChTipojornada2\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_ChTipojornada2">Parcial</label></span>
+                            
+                            &nbsp;<span id="MainContent_LchExp6"> (27)</span>
+                            
+                            <br />
+                  
+</div>
+                        <br />
+                        <div id="divfilt5" class="filtmov">
+                            <a onclick="cambclasefiltr6(); return false;" id="MainContent_Boton4" class="botonmovil" href="javascript:__doPostBack(&#39;ctl00$MainContent$Boton4&#39;,&#39;&#39;)" style="display:inline-block;width:500px;">- Zona Geográfica</a>
+                        </div>
+                        <h3 class="novermovil">Zona geográfica</h3>
+                        <div id="MainContent_Zonageo" class="cerradoocupacion abiertofilt">
+	<span class="Check" title="Alsasua"><input id="MainContent_cbAlsasua0" type="checkbox" name="ctl00$MainContent$cbAlsasua0" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$cbAlsasua0\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_cbAlsasua0">Alsasua (0)</label></span><span class="Check" title="Aoiz"><input id="MainContent_cbAoiz1" type="checkbox" name="ctl00$MainContent$cbAoiz1" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$cbAoiz1\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_cbAoiz1">Aoiz (0)</label></span><span class="Check" title="Estella"><input id="MainContent_cbEstella2" type="checkbox" name="ctl00$MainContent$cbEstella2" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$cbEstella2\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_cbEstella2">Estella (0)</label></span><span class="Check" title="Lodosa"><input id="MainContent_cbLodosa3" type="checkbox" name="ctl00$MainContent$cbLodosa3" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$cbLodosa3\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_cbLodosa3">Lodosa (0)</label></span><span class="Check" title="Pamplona"><input id="MainContent_cbPamplona4" type="checkbox" name="ctl00$MainContent$cbPamplona4" checked="checked" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$cbPamplona4\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_cbPamplona4">Pamplona (84)</label></span><span class="Check" title="Santesteban"><input id="MainContent_cbSantesteban5" type="checkbox" name="ctl00$MainContent$cbSantesteban5" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$cbSantesteban5\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_cbSantesteban5">Santesteban (0)</label></span><span class="Check" title="Tafalla"><input id="MainContent_cbTafalla7" type="checkbox" name="ctl00$MainContent$cbTafalla7" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$cbTafalla7\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_cbTafalla7">Tafalla (0)</label></span><span class="Check" title="Tudela"><input id="MainContent_cbTudela8" type="checkbox" name="ctl00$MainContent$cbTudela8" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$cbTudela8\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="MainContent_cbTudela8">Tudela (0)</label></span>
+</div>
+                        &nbsp;
+
+                    </div>
+            </div>
+         
+            <div id="busder">
+                <h2 class="titulitis" style="float: left;width: 30%;">Resultados <span id="MainContent_LResultados">(84)</span>
+                </h2>
+               <div id="divord" class="filtmov"> <a onclick="cambclasefiltr2(); return false;" id="MainContent_Abrirorde" class="botonmovil" href="javascript:__doPostBack(&#39;ctl00$MainContent$Abrirorde&#39;,&#39;&#39;)" style="display:inline-block;color:#CC0000;width:100%;">Ordenar por</a></div>
+                <div id="Movbusq" class="abiertofilt" style="float:right;margin-top: 25px;">
+                <b>Ordenar por&nbsp; </b><input id="MainContent_reciente" type="radio" name="ctl00$MainContent$verbien" value="reciente" checked="checked" />Más reciente&nbsp; <input id="MainContent_antigu" type="radio" name="ctl00$MainContent$verbien" value="antigu" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$antigu\&#39;,\&#39;\&#39;)&#39;, 0)" />Más antiguo
+                    </div>
+                <div style="clear:both;">
+                </div>
+    
+                <div class="scrolist" style="width:100%;">
+       
+                    
+       
+        <br />
+    
+        <table cellpadding="2" cellspacing="0" border="1" style="width: 200px; border: dashed 2px #04AFEF;
+            background-color: #B0E2F5">
+            
+        <tr>
+            
+
+        <div class="miniresumen2"> 
+            <div class="clearfix">
+                <span>15/2026/009000</span>
+                <a id="MainContent_Liofertas_ctrl0_HyperLink1_0" title="Añadir a favoritos" class="linkbot" href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$ctrl0$ctl00$HyperLink1&#39;,&#39;&#39;)"><img class="elfav" src=/EmpleoIntermediacion/images/star.png width="25" /></a>
+            </div>
+            <a id="MainContent_Liofertas_ctrl0_linkbuttonEmail_0" CommandName="titulo" OnClick="Entraroferta_Click" CommandArgument="18554" href="empleo/18554"><h2 style="font-size:18px;">Grado en Relaciones Laborales y Recursos Humanos (prácticas no laborales)</h2></a> 
+                        
+            <br /><br />
+      <span><span class="material-icons iconosAlineados">home</span><span class="iconicos">Pamplona</span><span class="material-icons iconosAlineados">groups</span><span class="iconicos"> 1</span> <span class="material-icons iconosAlineados">date_range</span><span class="iconicos">  04/09/2026 - 11/09/2026</span> </span>
+             <br /><br />
+                    <div class="descort"> </div>
+                    <br /><br />
+
+        </div>
+        
+    
+        </tr>
+    
+        <tr>
+            
+
+        <div class="miniresumen2"> 
+            <div class="clearfix">
+                <span>15/2026/004342</span>
+                <a id="MainContent_Liofertas_ctrl1_HyperLink1_1" title="Añadir a favoritos" class="linkbot" href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$ctrl1$ctl00$HyperLink1&#39;,&#39;&#39;)"><img class="elfav" src=/EmpleoIntermediacion/images/star.png width="25" /></a>
+            </div>
+            <a id="MainContent_Liofertas_ctrl1_linkbuttonEmail_1" CommandName="titulo" OnClick="Entraroferta_Click" CommandArgument="18536" href="empleo/18536"><h2 style="font-size:18px;">Dependiente/a de confitería</h2></a> 
+                        
+            <br /><br />
+      <span><span class="material-icons iconosAlineados">home</span><span class="iconicos">Pamplona</span><span class="material-icons iconosAlineados">groups</span><span class="iconicos"> 1</span> <span class="material-icons iconosAlineados">date_range</span><span class="iconicos">  04/09/2026 - 11/09/2026</span> </span>
+             <br /><br />
+                    <div class="descort"> </div>
+                    <br /><br />
+
+        </div>
+        
+    
+        </tr>
+    
+        <tr>
+            
+
+        <div class="miniresumen2"> 
+            <div class="clearfix">
+                <span>15/2026/004339</span>
+                <a id="MainContent_Liofertas_ctrl2_HyperLink1_2" title="Añadir a favoritos" class="linkbot" href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$ctrl2$ctl00$HyperLink1&#39;,&#39;&#39;)"><img class="elfav" src=/EmpleoIntermediacion/images/star.png width="25" /></a>
+            </div>
+            <a id="MainContent_Liofertas_ctrl2_linkbuttonEmail_2" CommandName="titulo" OnClick="Entraroferta_Click" CommandArgument="18534" href="empleo/18534"><h2 style="font-size:18px;">Operario/a de reparaciones de componentes mecánico-hidráulicos</h2></a> 
+                        
+            <br /><br />
+      <span><span class="material-icons iconosAlineados">home</span><span class="iconicos">Beriáin</span><span class="material-icons iconosAlineados">groups</span><span class="iconicos"> 1</span> <span class="material-icons iconosAlineados">date_range</span><span class="iconicos">  04/09/2026 - 11/09/2026</span> </span>
+             <br /><br />
+                    <div class="descort"> </div>
+                    <br /><br />
+
+        </div>
+        
+    
+        </tr>
+    
+        <tr>
+            
+
+        <div class="miniresumen2"> 
+            <div class="clearfix">
+                <span>15/2026/004338</span>
+                <a id="MainContent_Liofertas_ctrl3_HyperLink1_3" title="Añadir a favoritos" class="linkbot" href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$ctrl3$ctl00$HyperLink1&#39;,&#39;&#39;)"><img class="elfav" src=/EmpleoIntermediacion/images/star.png width="25" /></a>
+            </div>
+            <a id="MainContent_Liofertas_ctrl3_linkbuttonEmail_3" CommandName="titulo" OnClick="Entraroferta_Click" CommandArgument="18551" href="empleo/18551"><h2 style="font-size:18px;">Conductor/a de furgoneta</h2></a> 
+                        
+            <br /><br />
+      <span><span class="material-icons iconosAlineados">home</span><span class="iconicos">Berrioplano</span><span class="material-icons iconosAlineados">groups</span><span class="iconicos"> 1</span> <span class="material-icons iconosAlineados">date_range</span><span class="iconicos">  04/09/2026 - 11/09/2026</span> </span>
+             <br /><br />
+                    <div class="descort"> </div>
+                    <br /><br />
+
+        </div>
+        
+    
+        </tr>
+    
+        <tr>
+            
+
+        <div class="miniresumen2"> 
+            <div class="clearfix">
+                <span>15/2026/004337</span>
+                <a id="MainContent_Liofertas_ctrl4_HyperLink1_4" title="Añadir a favoritos" class="linkbot" href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$ctrl4$ctl00$HyperLink1&#39;,&#39;&#39;)"><img class="elfav" src=/EmpleoIntermediacion/images/star.png width="25" /></a>
+            </div>
+            <a id="MainContent_Liofertas_ctrl4_linkbuttonEmail_4" CommandName="titulo" OnClick="Entraroferta_Click" CommandArgument="18528" href="empleo/18528"><h2 style="font-size:18px;">Repartidor/a de actos administrativos</h2></a> 
+                        
+            <br /><br />
+      <span><span class="material-icons iconosAlineados">home</span><span class="iconicos">Pamplona/Iruña</span><span class="material-icons iconosAlineados">groups</span><span class="iconicos"> 1</span> <span class="material-icons iconosAlineados">date_range</span><span class="iconicos">  04/09/2026 - 08/09/2026</span> </span>
+             <br /><br />
+                    <div class="descort"> </div>
+                    <br /><br />
+
+        </div>
+        
+    
+        </tr>
+    
+        <tr>
+            
+
+        <div class="miniresumen2"> 
+            <div class="clearfix">
+                <span>15/2026/004334</span>
+                <a id="MainContent_Liofertas_ctrl5_HyperLink1_5" title="Añadir a favoritos" class="linkbot" href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$ctrl5$ctl00$HyperLink1&#39;,&#39;&#39;)"><img class="elfav" src=/EmpleoIntermediacion/images/star.png width="25" /></a>
+            </div>
+            <a id="MainContent_Liofertas_ctrl5_linkbuttonEmail_5" CommandName="titulo" OnClick="Entraroferta_Click" CommandArgument="18505" href="empleo/18505"><h2 style="font-size:18px;">Profesor/a de física en academia</h2></a> 
+                        
+            <br /><br />
+      <span><span class="material-icons iconosAlineados">home</span><span class="iconicos">Pamplona / Iruña</span><span class="material-icons iconosAlineados">groups</span><span class="iconicos"> 1</span> <span class="material-icons iconosAlineados">date_range</span><span class="iconicos">  04/09/2026 - 11/09/2026</span> </span>
+             <br /><br />
+                    <div class="descort"> </div>
+                    <br /><br />
+
+        </div>
+        
+    
+        </tr>
+    
+        <tr>
+            
+
+        <div class="miniresumen2"> 
+            <div class="clearfix">
+                <span>15/2026/004333</span>
+                <a id="MainContent_Liofertas_ctrl6_HyperLink1_6" title="Añadir a favoritos" class="linkbot" href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$ctrl6$ctl00$HyperLink1&#39;,&#39;&#39;)"><img class="elfav" src=/EmpleoIntermediacion/images/star.png width="25" /></a>
+            </div>
+            <a id="MainContent_Liofertas_ctrl6_linkbuttonEmail_6" CommandName="titulo" OnClick="Entraroferta_Click" CommandArgument="18537" href="empleo/18537"><h2 style="font-size:18px;">Educador/a infantil con euskera</h2></a> 
+                        
+            <br /><br />
+      <span><span class="material-icons iconosAlineados">home</span><span class="iconicos">Sarriguren</span><span class="material-icons iconosAlineados">groups</span><span class="iconicos"> 1</span> <span class="material-icons iconosAlineados">date_range</span><span class="iconicos">  04/09/2026 - 11/09/2026</span> </span>
+             <br /><br />
+                    <div class="descort"> </div>
+                    <br /><br />
+
+        </div>
+        
+    
+        </tr>
+    
+        <tr>
+            
+
+        <div class="miniresumen2"> 
+            <div class="clearfix">
+                <span>15/2026/003793</span>
+                <a id="MainContent_Liofertas_ctrl7_HyperLink1_7" title="Añadir a favoritos" class="linkbot" href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$ctrl7$ctl00$HyperLink1&#39;,&#39;&#39;)"><img class="elfav" src=/EmpleoIntermediacion/images/star.png width="25" /></a>
+            </div>
+            <a id="MainContent_Liofertas_ctrl7_linkbuttonEmail_7" CommandName="titulo" OnClick="Entraroferta_Click" CommandArgument="17885" href="empleo/17885"><h2 style="font-size:18px;">Peón/a ordinario/a para trabajos en altura</h2></a> 
+                        
+            <br /><br />
+      <span><span class="material-icons iconosAlineados">home</span><span class="iconicos">Noáin (Valle de Elorz)/Noain (Elortzibar)</span><span class="material-icons iconosAlineados">groups</span><span class="iconicos"> 1</span> <span class="material-icons iconosAlineados">date_range</span><span class="iconicos">  04/09/2026 - 11/09/2026</span> </span>
+             <br /><br />
+                    <div class="descort"> </div>
+                    <br /><br />
+
+        </div>
+        
+    
+        </tr>
+    
+        <tr>
+            
+
+        <div class="miniresumen2"> 
+            <div class="clearfix">
+                <span>15/2026/004330</span>
+                <a id="MainContent_Liofertas_ctrl8_HyperLink1_8" title="Añadir a favoritos" class="linkbot" href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$ctrl8$ctl00$HyperLink1&#39;,&#39;&#39;)"><img class="elfav" src=/EmpleoIntermediacion/images/star.png width="25" /></a>
+            </div>
+            <a id="MainContent_Liofertas_ctrl8_linkbuttonEmail_8" CommandName="titulo" OnClick="Entraroferta_Click" CommandArgument="18514" href="empleo/18514"><h2 style="font-size:18px;">Inspector/a de servicios</h2></a> 
+                        
+            <br /><br />
+      <span><span class="material-icons iconosAlineados">home</span><span class="iconicos">Pamplona/Iruña</span><span class="material-icons iconosAlineados">groups</span><span class="iconicos"> 1</span> <span class="material-icons iconosAlineados">date_range</span><span class="iconicos">  04/09/2026 - 11/09/2026</span> </span>
+             <br /><br />
+                    <div class="descort"> </div>
+                    <br /><br />
+
+        </div>
+        
+    
+        </tr>
+    
+        <tr>
+            
+
+        <div class="miniresumen2"> 
+            <div class="clearfix">
+                <span>15/2026/004329</span>
+                <a id="MainContent_Liofertas_ctrl9_HyperLink1_9" title="Añadir a favoritos" class="linkbot" href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$ctrl9$ctl00$HyperLink1&#39;,&#39;&#39;)"><img class="elfav" src=/EmpleoIntermediacion/images/star.png width="25" /></a>
+            </div>
+            <a id="MainContent_Liofertas_ctrl9_linkbuttonEmail_9" CommandName="titulo" OnClick="Entraroferta_Click" CommandArgument="18521" href="empleo/18521"><h2 style="font-size:18px;">Ayudante de frigorista</h2></a> 
+                        
+            <br /><br />
+      <span><span class="material-icons iconosAlineados">home</span><span class="iconicos">Orcoyen / Orkoien</span><span class="material-icons iconosAlineados">groups</span><span class="iconicos"> 1</span> <span class="material-icons iconosAlineados">date_range</span><span class="iconicos">  04/09/2026 - 11/09/2026</span> </span>
+             <br /><br />
+                    <div class="descort"> </div>
+                    <br /><br />
+
+        </div>
+        
+    
+        </tr>
+    
+            <span id="MainContent_Liofertas_DataPager1"><a class="aspNetDisabled">Anterior</a>&nbsp;<span>1</span>&nbsp;<a href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$DataPager1$ctl01$ctl01&#39;,&#39;&#39;)">2</a>&nbsp;<a href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$DataPager1$ctl01$ctl02&#39;,&#39;&#39;)">3</a>&nbsp;<a href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$DataPager1$ctl01$ctl03&#39;,&#39;&#39;)">4</a>&nbsp;<a href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$DataPager1$ctl01$ctl04&#39;,&#39;&#39;)">5</a>&nbsp;&nbsp;<a href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$DataPager1$ctl01$ctl05&#39;,&#39;&#39;)">...</a>&nbsp;<a href="javascript:__doPostBack(&#39;ctl00$MainContent$Liofertas$DataPager1$ctl02$ctl00&#39;,&#39;&#39;)">Siguiente</a>&nbsp;</span>
+        </table>
+    
+    </div>
+                </div>
+            
+        </div>
+   
+   
+<footer class="footer">
+    
+
+    
+    <script type="text/javascript">
+
+        
+
+    </script>
+    
+
+</footer>
+
+        </div>
+         <hr />
+            <footer class="text-center footer-style">
+   
+	<div class="footer">
+		<div class="col1">
+            <p class="web">Contacto soporte técnico sobre ofertas de empleo: <a class="nowrap" href="tel:+34848420100">848 42 01 00</a></p>
+            <p class="web">Horario: de 8:30 a 14:30 h. de lunes a viernes </p>
+		</div>
+
+        <div class="col2">
+            <div class="rrss">
+				
+			</div>
+        </div>
+
+        <div class="col3">
+            <img src="/EmpleoIntermediacion/images/logoGOB.png" style="width:100%;"/>
+		</div>
+	</div>
+</footer>
+    </form>
+    
+<script type="text/javascript">(function() { var qtm = document.createElement("script"); qtm.type = "text/javascript"; qtm.async = 1; qtm.src = "https://cdn.quantummetric.com/qscripts/quantum-gobnavarra.js"; var d = document.getElementsByTagName("script")[0]; !window.QuantumMetricAPI && d.parentNode.insertBefore(qtm, d);})();</script></body>
+</html>
